@@ -7,6 +7,10 @@ module.exports = {
               port: process.env.NEXT_PUBLIC_BACKEND_URL_PORT,
               pathname: 'uploads/*',
             },
+            {
+              protocol: "https",
+              hostname: "**",
+            },
           ],
     },
   }
