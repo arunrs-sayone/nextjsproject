@@ -16,15 +16,6 @@ interface Data {
 
 export default function Tutorial({data}:{data:Data[]}) {
 
-  const [state, setstate] = useState<{title:string}>({title:''})
-
-  useEffect(async() => {
-    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/1`)
-    const res = await response.json()
-    setstate(res)
-  },[])
-
-
 
   return (
     <div className={styles.container}>
@@ -34,17 +25,11 @@ export default function Tutorial({data}:{data:Data[]}) {
       </Head>
     
       <div className={styles.banner}>
-          {state ? (
-            <>
-                {state.title}
-            </>
-          ) : (
-            <>loading</>
-          )}
+          
 
           {data?.map((item) => (
               <div className={styles.banneritem}>
-              <Image src={item.url} width={500} height={200}/>
+              <Image src={item.url} width={500} height={200} alt="image"/>
               <div className={styles.text}>
                    {item.title}   
               </div>

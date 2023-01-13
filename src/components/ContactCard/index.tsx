@@ -86,17 +86,17 @@ const ContactCard = ({data}:Props) => {
                             handleSubmit,
                             isSubmitting,
                         }) => (
-                        <form >
+                        <form onSubmit={(e) => handleSubmit(e)} >
                             <div className="form-group">
                                 <input type="email" name="email" onChange={handleChange} className="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" value={values.email}/>
                             </div>
                             {errors.email}
                             <div className="form-group">
-                                <textarea name="message" onChange={handleChange} id="" cols="30" rows="7" className="form-control form-control-lg" placeholder="Message" value={values.message}></textarea>
+                                <textarea name="message" onChange={handleChange} id="" cols={30} rows={7} className="form-control form-control-lg" placeholder="Message" value={values.message}></textarea>
                             </div>
                             {errors.message}
 
-                            <button onClick={handleSubmit} className="btn btn-primary btn-block btn-lg mt-3">Send Message</button>
+                            <button type="submit" className="btn btn-primary btn-block btn-lg mt-3">Send Message</button>
                         </form>
                         )}
                         </Formik>

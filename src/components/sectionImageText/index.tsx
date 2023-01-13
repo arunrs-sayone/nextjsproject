@@ -21,7 +21,7 @@ const SectionImageText = ({data}:Props) => {
         <div className={[styles.maindiv,`row` ].join(" ") }>
             <div className="col-md-4">
                 <div className={styles.image}>
-                     <Image src={process.env.NEXT_PUBLIC_BACKEND_URL + data.image.data.attributes.url} width={data.image.data.attributes.width} height={data.image.data.attributes.height}/>
+                     <Image alt="image" src={process.env.NEXT_PUBLIC_BACKEND_URL + data.image.data.attributes.url} width={data.image.data.attributes.width} height={data.image.data.attributes.height}/>
                 </div>
             </div>
             <div className="col-md-8">
