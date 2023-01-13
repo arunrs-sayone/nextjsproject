@@ -17,7 +17,7 @@ const ContactCard = ({data}:Props) => {
 
     const onMessageSent = async(values) => {
 
-       await fetch('http://localhost:1337/api/contact-details/', {
+       await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/contact-details/`, {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({data: values})
