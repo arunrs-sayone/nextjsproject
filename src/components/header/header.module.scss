@@ -1,0 +1,45 @@
+.logo{
+    width: 100px;
+    img{
+        width: 100%;
+    }
+}
+.headerouter{
+    border: 1px solid rgba(248, 248, 248, 0.55);
+    padding: 10px;
+    
+    .link{
+        font-weight: 600;
+        font-size: 14px;
+        color: #fff ;
+        a{
+            text-decoration: none;
+            padding: 10px;
+        color: #fff ;
+        &:hover{
+            color: var(--primarycolor);
+        }
+
+        }
+    }
+
+}
+.headerouterscroll{
+    @extend  .headerouter;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+    .link{
+        font-weight: 600;
+        font-size: 14px;
+        color: #000 ;
+        a{
+            text-decoration: none;
+            padding: 10px;
+        color: #000 ;
+
+        }
+    }
+}
